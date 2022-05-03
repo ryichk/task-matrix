@@ -1,0 +1,13 @@
+{# このテンプレートがbase.htmlテンプレートのblockを置き換える #}
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="w-56 mx-auto text-lg">
+    <h1>{% block title %}Home画面{% endblock %}</h1>
+    {% if g.user %}
+      Hello {{ g.user['username'] }}
+    {% else %}
+      {{ hello }}
+    {% endif %}
+  </div>
+{% endblock %}

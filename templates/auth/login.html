@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card w-96 bg-base-200 shadow-xl mx-auto">
+  <div class="card-body">
+    <h1 class="card-title">ログイン</h1>
+    <form method="post" >
+      <label for="username" class="block mt-5 mb-1">ユーザ名</label>
+      <input name="username" id="username" class="input w-full max-w-xs" required>
+      <label for="password" class="block mt-5 mb-1">パスワード</label>
+      <input type="password" name="password" id="password" class="input w-full max-w-xs" required>
+      <div class="w-full mt-6">
+        <input type="submit" class="btn btn-primary block w-32 mx-auto" value="ログイン">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
